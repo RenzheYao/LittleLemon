@@ -7,7 +7,8 @@ class Menu(models.Model):
     description = models.TextField(default='')
     
     def __str__(self):
-        return self.name
+        # return self.name
+        return f'{self.name} : {str(self.price)}'
 
 
 class Booking(models.Model):
@@ -17,3 +18,4 @@ class Booking(models.Model):
     
     def __str__(self):
         return f"{self.name} - {self.booking_date}"
+        
